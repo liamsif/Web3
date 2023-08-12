@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <style>
+
+
+        h1 {
+            color: hotpink;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #404F5B;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        i {
+            color: #860096;
+            font-size: 100px;
+            line-height: 200px;
+            margin-left: -15px;
+        }
+
+        .card {
+            background: white;
+            padding: 60px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 0 auto;
+            margin-left: 150px;
+            margin-top: 50px;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        a {
+            color: #ff00dc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Registration" class="title">Registration</div>
+
+        <div hidden id="preloader">
+            <div id="loading"></div>
+        </div>
+        <div hidden id="card1" class="card">
+            <div hidden id="card2" style="border-radius: 200px; height: 200px; width: 200px; background-color: #ff97fd; margin: 0 auto;">
+                <i class="checkmark">✓</i>
+            </div>
+            <h1 hidden id="card3">Success</h1>
+            <p hidden id="card4">The registration was successful;<br /> <a href="HomePage.html">Back to home page!</a></p>
+        </div>
+    </div>
+    <script>
+        function show1() {
+            preloader.hidden = true;
+            card1.hidden = false;
+            card2.hidden = false;
+            card3.hidden = false;
+            card4.hidden = false;
+        }
+        function callshow1() {
+            setTimeout(show1, 5000);
+        }
+        function loading() {
+            preloader.hidden = false;
+            callshow1();
+        }
+        loading()
+    </script>
+</body>
+</html>

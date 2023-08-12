@@ -1,0 +1,74 @@
+﻿.spiralsection {
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    min-width: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #f1f1f1;
+    background-color: #ddd;
+    background-size: cover;
+}
+.spiralsection {
+    background: url('https://images1.calcalist.co.il/picserver3/crop_images/2021/04/26/1077233/1077233_426_93_1270_715_0_x-large.jpg') no-repeat left;
+    background-size: 85%;
+    background-color: #ddd;
+    overflow: hidden;
+    padding: 100px 0;
+    background-size: contain
+}
+.inner-container {
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 100px;
+}
+.inner-container h1{
+margin-bottom: 30px;
+font-size: 30px;
+font-weight: 800;
+}
+.border{
+    height: 3px;
+    width: 280px;
+    background-color: #006bff;
+}
+.text{
+    font-size: 15px;
+    color: #545454;
+    line-height: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+#a {
+    border: none;
+    padding: 8px 15px;
+    background-color: #006bff;
+    color: #fff;
+    text-decoration: none;
+}
+    #a:hover {
+        text-decoration: underline;
+    }

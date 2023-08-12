@@ -1,0 +1,70 @@
+﻿.history {
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #d1d1d1;
+}
+.history {
+    width: 100%;
+    padding: 78px 0px;
+
+}
+.history img{
+    height: auto;
+    width: 420px;
+}
+.text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.text h1{
+    color: white;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.text p {
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+a{
+    background: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+    a:hover {
+        background: transparent;
+        border: 2px solid #f9004d;
+    }

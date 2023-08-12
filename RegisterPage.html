@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="Registration" class="title">Registration</div>
+        <div class="content">
+            <!---------------RegisterationPart------------------>
+            <form id="form1" onsubmit="return cheackValue()" action="success.html">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details"><div>First Name</div><div id="name1" style="color:red"></div></span>
+                        <input name="firstName" type="text" id="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input name="lastName" type="text" id="lastName" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input name="email" type="email" id="Email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input name="Username" type="text" id="Username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><div>Password</div><div style="color:red" id="PasswordSpan"></div> </span>
+                        <input name="Password" type="text" id="Password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><div>Confirm Password</div><div style="color:red" id="cPasswordSpan"></div></span>
+                        <input name="cPassowrd" type="text" id="cPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input name="phoneNumber" type="tel" class="phone" id="Phone" placeholder="xxx-xxx-xxxx" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Age</span>
+                        <input name="age" type="number" id="Age" max="120" min="0" placeholder="Enter your age" required>
+                    </div>
+
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label name="gender" for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span  class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <textarea name="textareaS" class="textareaS" rows="4" cols="50" placeholder="Remarks..." style="height:auto"></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register" class="button1" />
+                </div>
+            </form>
+            <!------------------StylePart------------------->
+        </div>
+    </div>
+    <script>
+        function cheackValue() {
+            var result = true;
+            firstName = firstName.value;
+            if (Password.value != cPassword.value) {
+                PasswordSpan.innerHTML = " *Not Matched*";
+                cPasswordSpan.innerHTML = " *Not Matched*";
+
+                result = false;
+            }
+            if (firstName.length <= 2) {
+                name1.innerHTML = " *Must have over 2 letters*";
+
+                result = false;
+            }
+            return result;
+        }
+    </script>
+</body>
+</html>
